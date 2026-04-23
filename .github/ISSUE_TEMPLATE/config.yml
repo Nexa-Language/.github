@@ -1,11 +1,15 @@
+# 强制用户使用模板，不允许开启空白 Issue
 blank_issues_enabled: false
+
 contact_links:
-  - name: Feature request
-    url: https://github.com/orgs/supabase/discussions/categories/feature-requests?discussions_q=is%3Aopen+category%3A%22Feature+Requests%22+sort%3Atop
-    about: Request a new feature or example.
-  - name: Ask a question
-    url: https://github.com/orgs/supabase/discussions/new/choose
-    about: Ask questions and discuss with other community members.
-  - name: Want to work with us?
-    url: https://supabase.io/humans.txt
-    about: Want to work with us? Get in touch!
+  - name: "💡 需求建议 (Feature request)"
+    url: https://github.com/orgs/Nexa-Language/discussions/categories/feature-requests
+    about: "想要为 Nexa 增加新功能或算子？请在这里发起讨论。"
+    
+  - name: "❓ 提问与交流 (Ask a question)"
+    url: https://github.com/orgs/Nexa-Language/discussions/new/choose
+    about: "在使用过程中遇到疑问或想讨论 Agent 编排技巧？请在 Discussions 提问。"
+    
+  - name: "💼 加入我们 (Want to work with us?)"
+    url: https://nexa-lang.com/careers
+    about: "如果你对构建下一代 Agentic 基础设施感兴趣，欢迎联系我们！"
