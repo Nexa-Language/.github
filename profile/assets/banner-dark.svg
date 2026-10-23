@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="448" viewBox="0 0 1200 448" role="img" aria-labelledby="title desc">
+  <title id="title">Nexa — An agent-native language and runtime</title>
+  <desc id="desc">Define the work. Make execution explicit. Nexa connects source declarations, bounded execution, and inspectable state.</desc>
+  <defs>
+    <linearGradient id="neuralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="448" rx="8" fill="#14171b"/>
+  <g fill="none" stroke="#30363e" stroke-width="1">
+    <path d="M48 105H1152M48 367H1152M746 135V337"/>
+    <path d="M1064 43h16m-8-8v16M1136 408h16m-8-8v16"/>
+  </g>
+  <!-- The established Nexa mark uses its original geometry and colors. -->
+  <g transform="translate(32 17) scale(.16)">
+    <rect x="100" y="90" width="46" height="220" rx="12" fill="#94A3B8"/>
+    <rect x="254" y="90" width="46" height="220" rx="12" fill="#94A3B8"/>
+    <path d="M146 130C220 130 180 270 254 270" fill="none" stroke="url(#neuralGrad)" stroke-width="46" stroke-linecap="round"/>
+  </g>
+  <g font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" fill="#f1f0ec">
+    <text x="99" y="59" font-size="25" font-weight="600" letter-spacing="3">NEXA</text>
+    <text x="48" y="201" font-size="57" font-weight="500" letter-spacing="-1.8">Define the work.</text>
+    <text x="48" y="269" font-size="57" font-weight="500" letter-spacing="-1.8">Make execution explicit.</text>
+    <text x="48" y="318" font-size="21" fill="#a3adb8">An agent-native language and runtime.</text>
+  </g>
+  <g font-family="'IBM Plex Mono','SFMono-Regular',Consolas,monospace">
+    <text x="1152" y="61" text-anchor="end" fill="#a3adb8" font-size="13" letter-spacing="1.4">LANGUAGE / RUNTIME / TOOLS</text>
+    <g fill="#a3adb8" font-size="13" letter-spacing="1.2">
+      <text x="786" y="158">01</text><text x="786" y="230">02</text><text x="786" y="302">03</text>
+    </g>
+    <g fill="#f1f0ec" font-size="23">
+      <text x="833" y="159">Declare</text><text x="833" y="231">Execute</text><text x="833" y="303">Inspect</text>
+    </g>
+    <g fill="#a3adb8" font-size="14">
+      <text x="833" y="184">agents · tools · contracts</text>
+      <text x="833" y="256">budgets · approvals · runs</text>
+      <text x="833" y="328">events · checkpoints</text>
+    </g>
+    <g fill="#92b8d2" font-size="13" letter-spacing="1.2">
+      <text x="48" y="408">BUILT FOR PEOPLE AND MODELS</text>
+      <text x="1099" y="408" text-anchor="end">.nx → AgentRunner → RunState</text>
+    </g>
+  </g>
+</svg>
