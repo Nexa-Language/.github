@@ -1,45 +1,50 @@
-<p align="center">
-  <img src="../img/logo.png" alt="Nexa Logo" width="150" />
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Nexa-Language/.github/main/profile/assets/banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Nexa-Language/.github/main/profile/assets/banner-light.svg">
+  <img alt="Nexa — An agent-native language and runtime. Define the work. Make execution explicit." src="https://raw.githubusercontent.com/Nexa-Language/.github/main/profile/assets/banner-light.svg" width="1200">
+</picture>
 
-<h1 align="center">Nexa Language</h1>
+### An agent-native language and runtime.
 
-<p align="center">
-  <b>A Native Domain-Specific Language and Virtual Machine for Agentic Workflows.</b><br/>
-  Bridging language abstraction and execution efficiency for next-generation LLM applications.
-</p>
+Nexa gives people and models a shared language for building agents. Define tools, contracts, and control flow in `.nx`; let the runtime manage model protocols, execution budgets, approvals, and recoverable state.
 
-<p align="center">
-  <a href="https://nexa-lang.com"><img src="https://img.shields.io/badge/Official_Website-nexa--lang.com-black?style=for-the-badge" alt="Website" /></a>
-  <a href="https://docs.nexa-lang.com"><img src="https://img.shields.io/badge/Documentation-Read_Now-blue?style=for-the-badge" alt="Docs" /></a>
-  <a href="https://twitter.com/YOUR_TWITTER"><img src="https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=for-the-badge&logo=twitter" alt="Twitter" /></a>
-</p>
+**[Start with Nexa](https://github.com/Nexa-Language/Nexa#readme)** · **[Documentation](https://docs.nexa-lang.com/en/quickstart/)** · **[中文文档](https://docs.nexa-lang.com/quickstart/)** · [Website](https://www.nexa-lang.com)
 
-<br/>
+---
 
-## 🌌 The Nexa Ecosystem
+#### Write the workflow. Keep the execution visible.
 
-Welcome to the official GitHub organization for Nexa. We are building the infrastructure to make non-deterministic, I/O-bound agentic workflows robust, fast, and scalable.
+```nexa
+agent Analyst {
+    prompt: "Analyze the evidence and explain your conclusions."
+    provider_api: "responses"
+    timeout: 120
+    max_tool_calls: 4
+}
 
-### 📦 Core Projects
+flow main {
+    findings = Analyst.run("Explain the trade-offs of checkpointing.");
+    print(findings);
+}
+```
 
-* ⚡ [**Nexa**](https://github.com/Nexa-Language/Nexa) — The core repository. Includes the Actor-based VM with $O(1)$ COW state snapshots and the DSL compiler.
-* 🛠️ [**Nexa CLI**](https://github.com/Nexa-Language/nexa-cli) — Command-line tools to build, test, and deploy Nexa workflows.
-* 📚 [**Nexa Docs**](https://github.com/Nexa-Language/docs) — The source code for `docs.nexa-lang.com`.
-* 🧩 [**Nexa Examples**](https://github.com/Nexa-Language/examples) — Ready-to-use boilerplate and advanced patterns (ReAct, Tree-of-Thoughts) written in Nexa DSL.
+Save this as `analysis.nx`, then run `nexa run analysis.nx` with a configured model provider. Follow the [installation and configuration guide](https://docs.nexa-lang.com/en/quickstart/) for the supported toolchain.
 
-## 🚀 Quick Start
+Python is the reference compiler and runtime. The Rust AVM develops a defined execution subset, checked against shared conformance cases. See the [implementation and support boundaries](https://github.com/Nexa-Language/Nexa#readme) for the current release.
 
-```bash
-# Install the Nexa toolchain
-curl -sSL [https://nexa-lang.com/install.sh](https://nexa-lang.com/install.sh) | bash
+#### One language. A working toolchain.
 
-# Run your first agent workflow
-nexa run hello_world.nx
-````
+| Project | Start here |
+| :--- | :--- |
+| **[Nexa](https://github.com/Nexa-Language/Nexa)** | Language, compiler, runtime, CLI, and executable examples. |
+| **[Nexa Code](https://github.com/Nexa-Language/Nexa-Code)** | A coding agent built in Nexa, with a terminal interface for tasks and tools. |
+| **[VS Code extension](https://github.com/Nexa-Language/Nexa-extension)** | Language support and development tools for `.nx` programs. |
+| **[Documentation](https://github.com/Nexa-Language/Nexa-docs)** | Guides, language reference, runtime contracts, and migration notes. |
 
-## 🤝 Contributing
+#### Research, in the open.
 
-We welcome contributions from the community\! Whether it's submitting a bug report, proposing a new feature, or writing code, your help is appreciated.
+Explore the projects alongside the language: [Skill-Compiler](https://github.com/Nexa-Language/Skill-Compiler), [SLIM-ARC](https://github.com/Nexa-Language/SLIM-ARC), [RAMP](https://github.com/Nexa-Language/RAMP), [EpiContext](https://github.com/Nexa-Language/EpiContext), [Nexa-net](https://github.com/Nexa-Language/Nexa-net), and [V-Core](https://github.com/Nexa-Language/V-Core). Each repository documents its own scope, evidence, and development status.
 
-Please read our [Contributing Guidelines](https://www.google.com/search?q=CONTRIBUTING.md) to get started.
+---
+
+**Build with us.** Start with a [small example](https://github.com/Nexa-Language/Nexa/tree/main/examples), [report an issue](https://github.com/Nexa-Language/Nexa/issues), or read the [contribution guide](https://github.com/Nexa-Language/.github/blob/main/CONTRIBUTING.md).

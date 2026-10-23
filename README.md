@@ -1,45 +1,15 @@
-<p align="center">
-  <img src="img/logo.png" alt="Nexa Logo" width="150" />
-</p>
+# Nexa organization profile
 
-<h1 align="center">Nexa Language</h1>
+This repository maintains the [Nexa-Language organization homepage](https://github.com/Nexa-Language), shared contribution guidance, and community templates.
 
-<p align="center">
-  <b>A Native Domain-Specific Language and Virtual Machine for Agentic Workflows.</b><br/>
-  Bridging language abstraction and execution efficiency for next-generation LLM applications.
-</p>
+- [Organization profile](profile/README.md)
+- [Contribution guide](CONTRIBUTING.md)
+- [Code of conduct](CODE_OF_CONDUCT.md)
 
-<p align="center">
-  <a href="https://nexa-lang.com"><img src="https://img.shields.io/badge/Official_Website-nexa--lang.com-black?style=for-the-badge" alt="Website" /></a>
-  <a href="https://docs.nexa-lang.com"><img src="https://img.shields.io/badge/Documentation-Read_Now-blue?style=for-the-badge" alt="Docs" /></a>
-  <a href="https://twitter.com/YOUR_TWITTER"><img src="https://img.shields.io/badge/Twitter-Follow-1DA1F2?style=for-the-badge&logo=twitter" alt="Twitter" /></a>
-</p>
+The profile uses the existing Nexa mark, graphite and paper surfaces, restrained blue accents, and native GitHub Markdown. Light and dark SVG banners live in `profile/assets/`. They contain no external font requests, scripts, or animations; all navigation and explanatory content remains accessible in Markdown.
 
-<br/>
+Before publishing a profile change, verify repository links, compile the complete `.nx` example with the target Nexa version, parse both SVGs, and inspect the profile at desktop and mobile widths. Banner URLs intentionally target this repository's default branch and become available when the assets are merged.
 
-## 🌌 The Nexa Ecosystem
+Suggested organization description: **An agent-native language and runtime. Built for people and models.**
 
-Welcome to the official GitHub organization for Nexa. We are building the infrastructure to make non-deterministic, I/O-bound agentic workflows robust, fast, and scalable.
-
-### 📦 Core Projects
-
-* ⚡ [**Nexa**](https://github.com/Nexa-Language/Nexa) — The core repository. Includes the Actor-based VM with $O(1)$ COW state snapshots and the DSL compiler.
-* 🛠️ [**Nexa CLI**](https://github.com/Nexa-Language/nexa-cli) — Command-line tools to build, test, and deploy Nexa workflows.
-* 📚 [**Nexa Docs**](https://github.com/Nexa-Language/docs) — The source code for `docs.nexa-lang.com`.
-* 🧩 [**Nexa Examples**](https://github.com/Nexa-Language/examples) — Ready-to-use boilerplate and advanced patterns (ReAct, Tree-of-Thoughts) written in Nexa DSL.
-
-## 🚀 Quick Start
-
-```bash
-# Install the Nexa toolchain
-curl -sSL [https://nexa-lang.com/install.sh](https://nexa-lang.com/install.sh) | bash
-
-# Run your first agent workflow
-nexa run hello_world.nx
-````
-
-## 🤝 Contributing
-
-We welcome contributions from the community\! Whether it's submitting a bug report, proposing a new feature, or writing code, your help is appreciated.
-
-Please read our [Contributing Guidelines](https://www.google.com/search?q=CONTRIBUTING.md) to get started.
+Suggested pinned repositories: **Nexa**, **Nexa-Code**, **Nexa-extension**, **Nexa-docs**, followed by two research projects selected by maintainers. Organization settings and pinned repositories are managed separately from this source change.
