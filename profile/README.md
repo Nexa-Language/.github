@@ -17,6 +17,7 @@ Nexa gives people and models a shared language for building agents. Define tools
 ```nexa
 agent Analyst {
     prompt: "Analyze the evidence and explain your conclusions."
+    model: "openai/gpt-5.4-mini"
     provider_api: "responses"
     timeout: 120
     max_tool_calls: 4
@@ -28,7 +29,7 @@ flow main {
 }
 ```
 
-Save this as `analysis.nx`, then run `nexa run analysis.nx` with a configured model provider. Follow the [installation and configuration guide](https://docs.nexa-lang.com/en/quickstart/) for the supported toolchain.
+Save this as `analysis.nx`, configure the OpenAI provider, then run `nexa run analysis.nx`. Follow the [installation and configuration guide](https://docs.nexa-lang.com/en/quickstart/) for the supported toolchain and credentials.
 
 Python is the reference compiler and runtime. The Rust AVM develops a defined execution subset, checked against shared conformance cases. See the [implementation and support boundaries](https://github.com/Nexa-Language/Nexa#readme) for the current release.
 
