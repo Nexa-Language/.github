@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="448" viewBox="0 0 1200 448" role="img" aria-labelledby="title desc">
   <title id="title">Nexa — An agent-native language and runtime</title>
-  <desc id="desc">Define the work. Make execution explicit. Nexa connects source declarations, bounded execution, and inspectable state.</desc>
+  <desc id="desc">Define the work. Make execution explicit. Nexa 3.0 connects open goals, bounded resolution, evidence, and reviewed evolution.</desc>
   <defs>
     <linearGradient id="neuralGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#8B5CF6"/><stop offset="100%" stop-color="#3B82F6"/>
@@ -24,21 +24,21 @@
     <text x="48" y="318" font-size="21" fill="#52606b">An agent-native language and runtime.</text>
   </g>
   <g font-family="'IBM Plex Mono','SFMono-Regular',Consolas,monospace">
-    <text x="1152" y="61" text-anchor="end" fill="#52606b" font-size="13" letter-spacing="1.4">LANGUAGE / RUNTIME / TOOLS</text>
+    <text x="1152" y="61" text-anchor="end" fill="#52606b" font-size="13" letter-spacing="1.4">NEXA 3.0 / OPEN PROGRAMS</text>
     <g fill="#52606b" font-size="13" letter-spacing="1.2">
       <text x="786" y="158">01</text><text x="786" y="230">02</text><text x="786" y="302">03</text>
     </g>
     <g fill="#20272d" font-size="23">
-      <text x="833" y="159">Declare</text><text x="833" y="231">Execute</text><text x="833" y="303">Inspect</text>
+      <text x="833" y="159">Declare</text><text x="833" y="231">Resolve</text><text x="833" y="303">Evolve</text>
     </g>
     <g fill="#52606b" font-size="14">
-      <text x="833" y="184">agents · tools · contracts</text>
-      <text x="833" y="256">budgets · approvals · runs</text>
-      <text x="833" y="328">events · checkpoints</text>
+      <text x="833" y="184">goals · contracts · intent</text>
+      <text x="833" y="256">evidence · budgets · OCI</text>
+      <text x="833" y="328">revisions · grants · patches</text>
     </g>
     <g fill="#386785" font-size="13" letter-spacing="1.2">
       <text x="48" y="408">BUILT FOR PEOPLE AND MODELS</text>
-      <text x="1099" y="408" text-anchor="end">.nx → AgentRunner → RunState</text>
+      <text x="1099" y="408" text-anchor="end">.nx → ProgramIR → Evidence</text>
     </g>
   </g>
 </svg>

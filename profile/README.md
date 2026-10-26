@@ -6,41 +6,40 @@
 
 ### An agent-native language and runtime.
 
-Nexa gives people and models a shared language for building agents. Define tools, contracts, and control flow in `.nx`; let the runtime manage model protocols, execution budgets, approvals, and recoverable state.
+Nexa 3.0 brings **Open Programs** to `.nx`: declare a goal, state its contract, and leave the implementation open. The runtime resolves that work inside a bounded environment, records the evidence, and keeps revisions and patch permissions explicit.
 
 **[Start with Nexa](https://github.com/Nexa-Language/Nexa#readme)** · **[Documentation](https://docs.nexa-lang.com/en/quickstart/)** · **[中文文档](https://docs.nexa-lang.com/quickstart/)** · [Website](https://www.nexa-lang.com)
 
 ---
 
-#### Write the workflow. Keep the execution visible.
+#### Define the result. Keep the evidence.
 
 ```nexa
-agent Analyst {
-    prompt: "Analyze the evidence and explain your conclusions."
-    model: "openai/gpt-5.4-mini"
-    provider_api: "responses"
-    timeout: 120
-    max_tool_calls: 4
-}
-
-flow main {
-    findings = Analyst.run("Explain the trade-offs of checkpointing.");
-    print(findings);
+language "3.0"
+program Sum {
+    goal total() -> Int {
+        intent "Sum inputs.get('values', []). Return zero for an empty list."
+        capabilities [sandbox.exec]
+        ensure checks.sum
+        implementation open
+    }
 }
 ```
 
-Save this as `analysis.nx`, configure the OpenAI provider, then run `nexa run analysis.nx`. Follow the [installation and configuration guide](https://docs.nexa-lang.com/en/quickstart/) for the supported toolchain and credentials.
+Save this as `sum.nx` and run `nexa check sum.nx --json`. The check inspects the source and reports the open obligation without a model call or container. To resolve and run it, configure the provider, `checks.sum`, execution budget, and pinned OCI environment described in the [Open Programs guide](https://docs.nexa-lang.com/en/open_programs/) and [environment setup](https://docs.nexa-lang.com/en/open_environments/).
 
-Python is the reference compiler and runtime. The Rust AVM develops a defined execution subset, checked against shared conformance cases. See the [implementation and support boundaries](https://github.com/Nexa-Language/Nexa#readme) for the current release.
+Inspect the [evidence](https://docs.nexa-lang.com/en/open_evidence/) behind each result. Preview a maintenance patch, then issue an [exact grant](https://docs.nexa-lang.com/en/open_grants/) before applying it. [Revisions and durable activities](https://docs.nexa-lang.com/en/open_revisions/) make interrupted work recoverable.
+
+Python is the reference 3.0 compiler and runtime; Open Programs execution uses Linux or macOS with Docker/OCI. Existing unversioned 2.4 agent and flow programs remain supported. The Rust AVM covers a defined 2.4 subset. See the [3.0 migration guide](https://docs.nexa-lang.com/en/migration_30/) for the version boundary.
 
 #### One language. A working toolchain.
 
 | Project | Start here |
 | :--- | :--- |
 | **[Nexa](https://github.com/Nexa-Language/Nexa)** | Language, compiler, runtime, CLI, and executable examples. |
-| **[Nexa Code](https://github.com/Nexa-Language/Nexa-Code)** | A coding agent built in Nexa, with a terminal interface for tasks and tools. |
-| **[VS Code extension](https://github.com/Nexa-Language/Nexa-extension)** | Language support and development tools for `.nx` programs. |
-| **[Documentation](https://github.com/Nexa-Language/Nexa-docs)** | Guides, language reference, runtime contracts, and migration notes. |
+| **[Nexa Code](https://github.com/Nexa-Language/Nexa-Code)** | A terminal workspace for goals, evidence, reviewed patches, and existing agent workflows. |
+| **[VS Code extension](https://github.com/Nexa-Language/Nexa-extension)** | Source checks, authoring, revisions, and runtime inspection inside the editor. |
+| **[Documentation](https://github.com/Nexa-Language/Nexa-docs)** | Bilingual 3.0 guides, runtime contracts, and the 2.4 compatibility path. |
 
 #### Research, in the open.
 

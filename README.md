@@ -8,7 +8,9 @@ This repository maintains the [Nexa-Language organization homepage](https://gith
 
 The profile uses the existing Nexa mark, graphite and paper surfaces, restrained blue accents, and native GitHub Markdown. Light and dark SVG banners live in `profile/assets/`. They contain no external font requests, scripts, or animations; all navigation and explanatory content remains accessible in Markdown.
 
-Before publishing a profile change, verify repository links, compile the complete `.nx` example with the target Nexa version, parse both SVGs, and inspect the profile at desktop and mobile widths. Banner URLs intentionally target this repository's default branch and become available when the assets are merged.
+The profile targets Nexa 3.0.0 Open Programs and preserves the documented 2.4 compatibility boundary. Its example demonstrates an open goal; `nexa check` validates the source offline, while resolution needs a provider, checks, a budget, and the documented OCI environment.
+
+Before publishing a profile change, verify repository links and documentation routes, check the complete `.nx` example with the pinned Nexa release, parse both SVGs, and inspect the profile at desktop and mobile widths. Publish the matching 3.0 documentation and tooling before the profile that links to them. Banner URLs intentionally target this repository's default branch and become available when the assets are merged.
 
 Suggested organization description: **An agent-native language and runtime. Built for people and models.**
 
